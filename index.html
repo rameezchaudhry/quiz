@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div style="margin-left: 85%;" id="adminPannel"><a href="admin.html"><button style="padding: 15px;" onclick="">Admin
+                pannal</button></a>
+    </div>
+    <div class="mainbody">
+        <div id="main">
+
+            <!-- main body -->
+            <div id="startpage">
+                <header>
+                    <h1>Quiz App</h1>
+                </header>
+                <div id="quiz">
+                    <h3>Total Marks: 100</h3>
+                    <h3>Passing Marks: 40%</h3>
+                    <h3>Time duration: 10 Minute</h3>
+                    <div class="bdiv"><button id="start" onclick="start(); startTimer()"> Start
+                        </button></div>
+
+                </div>
+            </div>
+
+            <div id="starttest">
+                <header>
+                    <h1>Quiz App</h1>
+                    <h3>Timer: <span id="min"> 10 </span> : <span id="sec"> 00 </span> : <span id="mili">00</span> </h3>
+                </header>
+                <div id="quesionSection">
+
+                </div>
+              <div style="text-align: center;"><button onclick="result()">Submit</button></div>  
+            </div>
+
+            <div id="result">
+                <header>
+                    <h1>Quiz App</h1>
+                </header>
+                <div id="quiz">
+                    <h2 style="text-decoration: underline; text-align: center;">Result</h2>
+                    <h3>Total Marks: <span id="tmarks">100</span></h3>
+                    <h3>Marks Obtained: <span id="mobtained"></span></h3>
+                    <h3>percentage:<span id="percentage"></span>%</h3>
+                    <h3>Remarks:<span id="remarks"></span></h3>
+                    <div class="bdiv"><button id="restart" onclick="restart()"> Restart </button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+    <script>
+        //for hide test div and another div on start
+        document.getElementById("starttest").style.display = "none";
+        document.getElementById("result").style.display = "none";
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCxSXLqRfuVbBpIrdSnVRADZpphRPcauIc",
+            authDomain: "quiz-9ec05.firebaseapp.com",
+            projectId: "quiz-9ec05",
+            storageBucket: "quiz-9ec05.appspot.com",
+            messagingSenderId: "982293490901",
+            appId: "1:982293490901:web:ac28dece93913b654e065c",
+            measurementId: "G-JPEYYDT4QE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      
+
+    </script>
+    <!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>

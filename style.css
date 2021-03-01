@@ -1,0 +1,82 @@
+
+@font-face{
+    font-family: ro;
+    src: url(font/Brygada1918-VariableFont_wght.ttf);
+}
+body{
+    background-color:rgba(255, 204, 255, 0.651);
+    opacity: 1;
+    color: rgb(15, 0, 0);
+    font-family:ro;
+}
+.mainbody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+}
+
+header{
+   
+    flex-direction: column;
+    text-align: center;
+
+}
+label p
+{
+display: inline;
+}
+button{
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color:rgb(55, 205, 243);
+    color: white;
+    border-radius: 5px;
+}
+button:active
+{
+    background-color:rgb(47, 163, 192);
+
+}
+#main{
+    margin-top:7% ;
+    max-width: 500px;
+    
+
+}
+h3,h4{
+    text-align: center;
+}
+h1{
+    color: tomato;
+}
+.bdiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#min,#sec,#mili{
+    color: rgb(179, 4, 4);
+}
+#quizsection div,#deletepannal{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#quizsection input,#remove
+{
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+#quizsection input:focus,#remove:focus{
+    border-bottom:2px solid rgb(0, 183, 255);
+}
+#num,#ans,#remove{
+    width: 40px;
+}
